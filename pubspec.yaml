@@ -42,6 +42,7 @@ dependencies:
   english_words: ^4.0.0
   text_to_speech: ^0.2.3
   photo_view: ^0.14.0
+  shared_preferences: ^2.1.1
 
 
 
@@ -84,10 +85,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  #fonts:
+   #- family: comforta
+    # fonts:
+     #  - asset: fonts/Comfortss-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

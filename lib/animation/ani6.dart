@@ -18,45 +18,32 @@ class myapp extends StatefulWidget {
 class _myappState extends State<myapp> {
   @override
   var firstchild = Icon(
-    Icons.smoke_free,
-    size: 700,
-    color: Colors.red,
+    Icons.male,
+    size: 210,
   );
   var secendchild = Icon(
-    Icons.cancel_outlined,
-    size: 600,
-    color: Colors.red,
+    Icons.female,
+    size: 210,
   );
   var state = CrossFadeState.showFirst;
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-            child: Text(
-          'my app',
-          style: TextStyle(fontSize: 48),
-        )),
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        if (state == CrossFadeState.showFirst) {
-          state = CrossFadeState.showSecond;
-        } else {
-          state = CrossFadeState.showFirst;
-        }
-        setState(() {
-
-        });
-      }),
-      body: Center(
-        child: AnimatedCrossFade(
+        floatingActionButton: FloatingActionButton(onPressed: () {
+          if (state == CrossFadeState.showFirst) {
+            state = CrossFadeState.showSecond;
+          } else {
+            state = CrossFadeState.showFirst;
+          }
+          setState(() {});
+        }),
+        body: Center(
+          child: AnimatedCrossFade(
             firstChild: firstchild,
             secondChild: secendchild,
+
             crossFadeState: state,
             duration: Duration(seconds: 1),
-            firstCurve: Curves.bounceIn,
-            secondCurve: Curves.bounceOut,
-            sizeCurve: Curves.easeInCirc),
-      ),
-    );
+          ),
+        ));
   }
 }
